@@ -1,7 +1,8 @@
-const Button = ({ children, click }) => {
+const Button = ({ children, click, ref }) => {
   return (
     <div>
       <button
+        ref={ref}
         onClick={() => click()}
         className="relative px-8 py-3 rounded-full font-semibold tracking-wider text-white uppercase overflow-hidden transition-all duration-300
                    bg-linear-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20

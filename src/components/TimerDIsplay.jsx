@@ -2,8 +2,17 @@ import Button from "./Button.jsx";
 import Fulldate from "./Fulldate.jsx";
 import ThreeDots from "./ThreeDots.jsx";
 import { Card, CardContent } from "@mui/material";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const TimerDIsplay = ({ toggleText, timer, time, Reset }) => {
+  const refName = useRef(null);
+  useEffect(() => {
+    if (refName.current) {
+      refName.current.focus();
+    }
+  }, []);
+
   return (
     <>
       <CardContent className="text-center py-10 px-6">
@@ -13,7 +22,7 @@ const TimerDIsplay = ({ toggleText, timer, time, Reset }) => {
         <Fulldate />
         <ThreeDots />
         <div className="flex m-6  justify-evenly align-middle items-center p-2 text-white">
-          <Button click={() => timer()}>
+          <Button ref={refName} click={() => timer()}>
             {toggleText ? "Pause" : "Resume"}
           </Button>
           <Button click={() => Reset()}>Reset</Button>
