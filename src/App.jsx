@@ -1,15 +1,19 @@
 import { useState, useRef } from "react";
 import TimerDIsplay from "./components/TimerDIsplay.jsx";
+import { useEffect } from "react";
 
 const App = () => {
   const refName = useRef(null);
-  const [Timer, setTimer] = useState(0);
+  const [Timer, setTimer] = useState(localStorage.getItem("time") || "");
   const [isRunning, setRunning] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("time", Timer);
+  }, [Timer]);
   const ToggleTimer = () => {
     if (isRunning) {
       clearInterval(refName.current);
       refName.current = null;
-      // setRunning(!isRunning);
     } else {
       refName.current = setInterval(() => {
         setTimer((e) =>
@@ -28,6 +32,7 @@ const App = () => {
     refName.current = null;
     setRunning(false);
     setTimer("");
+    localStorage.clear("time");
   };
   return (
     <>
