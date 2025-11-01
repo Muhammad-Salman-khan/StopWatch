@@ -1,16 +1,108 @@
-# React + Vite
+# Timeer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautiful, modern timer/clock application built with React, Vite, and Material-UI with stunning visual effects and responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🕐 **Real-time Clock Display** - Shows current time with elegant formatting
+- 📅 **Date Display** - Displays current day, date, month, and year
+- ▶️ **Pause/Resume Control** - Toggle the timer display
+- 🔄 **Reset Functionality** - Reset the timer to clear the display
+- 🎨 **Modern UI** - Beautiful gradient effects and glassmorphic design
+- 📱 **Fully Responsive** - Works seamlessly on all device sizes
+- ⚡ **Fast Performance** - Built with Vite and React 19
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **React 19** - Latest version of React for UI components
+- **Vite (Rolldown)** - Ultra-fast build tool for development and production
+- **Material-UI** - UI component library
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Emotion** - CSS-in-JS library for styling
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16 or higher)
+- pnpm (recommended) or npm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Muhammad-Salman-khan/StopWatch.git
+cd StopWatch
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+# or
+npm install
+```
+
+### Development
+
+Run the development server:
+```bash
+pnpm run dev
+# or
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser to see the application.
+
+### Build
+
+Build the application for production:
+```bash
+pnpm run build
+# or
+npm run build
+```
+
+### Preview
+
+Preview the production build:
+```bash
+pnpm run preview
+# or
+npm run preview
+```
+
+### Linting
+
+Run ESLint to check code quality:
+```bash
+pnpm run lint
+# or
+npm run lint
+```
+
+## Project Structure
+
+```
+StopWatch/
+├── src/
+│   ├── components/      # React components
+│   │   ├── Button.jsx
+│   │   ├── ThreeDots.jsx
+│   │   └── TimerDIsplay.jsx
+│   ├── assets/          # Static assets
+│   ├── App.jsx          # Main application component
+│   ├── main.jsx         # Application entry point
+│   └── index.css        # Global styles
+├── public/              # Public assets
+├── index.html           # HTML template
+├── package.json         # Project dependencies
+└── vite.config.js       # Vite configuration
+```
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
